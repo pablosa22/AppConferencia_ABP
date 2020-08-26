@@ -154,6 +154,9 @@ namespace AppConferenciaABP.ServiceReference3 {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ConferidoField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PreferencialField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -290,6 +293,19 @@ namespace AppConferenciaABP.ServiceReference3 {
                 if ((object.ReferenceEquals(this.ConferidoField, value) != true)) {
                     this.ConferidoField = value;
                     this.RaisePropertyChanged("Conferido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string Preferencial {
+            get {
+                return this.PreferencialField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PreferencialField, value) != true)) {
+                    this.PreferencialField = value;
+                    this.RaisePropertyChanged("Preferencial");
                 }
             }
         }
@@ -1187,10 +1203,10 @@ namespace AppConferenciaABP.ServiceReference3 {
         System.Threading.Tasks.Task<AppConferenciaABP.ServiceReference3.ValidaConferenciaCompletaResponse> ValidaConferenciaCompletaAsync(AppConferenciaABP.ServiceReference3.ValidaConferenciaCompletaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnviaPedidoParaPainel", ReplyAction="*")]
-        void EnviaPedidoParaPainel(int opcao, long numero, int filial);
+        void EnviaPedidoParaPainel(int opcao, long numero, int filial, int botao);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnviaPedidoParaPainel", ReplyAction="*")]
-        System.Threading.Tasks.Task EnviaPedidoParaPainelAsync(int opcao, long numero, int filial);
+        System.Threading.Tasks.Task EnviaPedidoParaPainelAsync(int opcao, long numero, int filial, int botao);
         
         // CODEGEN: Gerando contrato de mensagem porque o nome do elemento ValidaEnvioPedidoPainelResult no namespace http://tempuri.org/ não está marcado como nulo
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ValidaEnvioPedidoPainel", ReplyAction="*")]
@@ -2395,12 +2411,12 @@ namespace AppConferenciaABP.ServiceReference3 {
             return ((AppConferenciaABP.ServiceReference3.WebService1Soap)(this)).ValidaConferenciaCompletaAsync(inValue);
         }
         
-        public void EnviaPedidoParaPainel(int opcao, long numero, int filial) {
-            base.Channel.EnviaPedidoParaPainel(opcao, numero, filial);
+        public void EnviaPedidoParaPainel(int opcao, long numero, int filial, int botao) {
+            base.Channel.EnviaPedidoParaPainel(opcao, numero, filial, botao);
         }
         
-        public System.Threading.Tasks.Task EnviaPedidoParaPainelAsync(int opcao, long numero, int filial) {
-            return base.Channel.EnviaPedidoParaPainelAsync(opcao, numero, filial);
+        public System.Threading.Tasks.Task EnviaPedidoParaPainelAsync(int opcao, long numero, int filial, int botao) {
+            return base.Channel.EnviaPedidoParaPainelAsync(opcao, numero, filial, botao);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

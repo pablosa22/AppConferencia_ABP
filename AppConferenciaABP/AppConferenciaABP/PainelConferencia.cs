@@ -6,7 +6,7 @@ using System.Web;
 namespace AppConferenciaABP
 {
     public class PainelConferencia
-    {    
+    {
         public long Pedido { get; set; }
         public int Nota { get; set; }
         public int Codigo { get; set; }
@@ -17,5 +17,6 @@ namespace AppConferenciaABP
         public string Obs2 { get; set; }
         public string Conferente { get; set; }
         public string Conferido { get; set; }
+        public string Preferencial {get; set;}
     }
 }

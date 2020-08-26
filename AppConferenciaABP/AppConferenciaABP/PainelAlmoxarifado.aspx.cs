@@ -57,8 +57,6 @@ namespace AppConferenciaABP
                     LbPedido.Visible = false;
                     LbCodigo.Visible = false;
                     LbDescicao.Visible = false;
-
-
                 }
                 else
                 {
