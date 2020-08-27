@@ -29,7 +29,7 @@
 <body class="text-center" onLoad="javascript:window.clear.history(0)">
     <form runat="server">         
         <br />
-        <br />
+        <br />p
         <asp:Image ID="Image1" runat="server" ImageUrl="~/Img/aco2.png"/>                     
         <br />
         <br />
@@ -40,7 +40,7 @@
             <br />       
                 <asp:Button ID="btEntrar" class="btn btn-outline-success btn-block" runat="server" Text="Entrar" OnClick="btEntrar_Click" />                    
             <br />                 
-            <p class="mt-5 mb-3 text-muted">&copy; Desenvolvido Pela TI AçoBrazil Versão 4.4</p>
+            <p class="mt-5 mb-3 text-muted">&copy; Desenvolvido Pela TI AçoBrazil Versão 4.5</p>
             <asp:Label ID="lbDescricao" class="container" runat="server">Filial: 2 - Aço Bompreço</asp:Label>
         </div>
     </form>
